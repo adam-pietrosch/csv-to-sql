@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <title>From .csv to sql</title>
+</head>
+<body>
+
+    <div class="container">
+        <form>
+            <div class="input-field">
+                <input id="table_name" type="text" class="validate" required>
+                <label for="table_name">Table name</label>
+            </div>
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>File</span>
+                    <input id="csv_file" type="file" multiple accept=".csv" required>
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+
+            <button type="submit" class="waves-effect waves-light btn green">start</button>
+        </form>
+
+        <p id="show-text"></p>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./papaparse.min.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>
